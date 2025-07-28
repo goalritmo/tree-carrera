@@ -1,0 +1,45 @@
+---
+// Componente de cuenta regresiva para inscripciones al cursado
+---
+
+<div class="countdown-container text-center py-4">
+  <h2 class="text-2xl font-bold mb-4 text-blue-600">Inscripciones al Cursado del 2do Cuatrimestre</h2>
+  <div class="countdown-timer text-xl font-mono">
+    <span id="days">--</span> días, 
+    <span id="hours">--</span> horas, 
+    <span id="minutes">--</span> min,
+    <span id="seconds">--</span> segs
+  </div>
+  <p class="text-sm text-gray-600 mt-2">04/08/2025 al 15/08/2025</p>
+</div>
+
+<script>
+  function updateCountdown() {
+    // Fecha objetivo: 4 de agosto de 2025 a las 00:00 AM en Argentina (UTC-3)
+    const targetDate = new Date('2025-08-04T00:00:00-03:00');
+    const now = new Date();
+    const difference = targetDate.getTime() - now.getTime();
+    
+    if (difference <= 0) {
+      document.getElementById('days').textContent = '0';
+      document.getElementById('hours').textContent = '0';
+      document.getElementById('minutes').textContent = '0';
+      document.getElementById('seconds').textContent = '0';
+      return;
+    }
+    
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    
+    document.getElementById('days').textContent = days.toString().padStart(2, '0');
+    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+  }
+  
+  // Actualizar cada segundo
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script> 

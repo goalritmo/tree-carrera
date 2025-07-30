@@ -14,9 +14,10 @@ import Countdown from "@/components/Countdown.astro";
 <ul class="grid gap-y-6 pb-12 pt-4 text-center">
   {
     SITE.customLinks.map((link) => {
+      const isMateriasPrimerAno = link.title.includes("Materias de Primer Año");
       return (
         <li>
-          <CustomLink url={link.url}>{link.title}</CustomLink>
+          <CustomLink url={link.url} underline={isMateriasPrimerAno}>{link.title}</CustomLink>
         </li>
       );
     })

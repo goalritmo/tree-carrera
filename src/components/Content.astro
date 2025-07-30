@@ -15,9 +15,26 @@ import Countdown from "@/components/Countdown.astro";
   {
     SITE.customLinks.map((link) => {
       const isMateriasPrimerAno = link.title.includes("Materias de Primer Año");
+      
+      // Determinar el nombre del evento basado en el título del link
+      let eventName = 'tree_carrera_link_click';
+      if (link.title.includes("Materias de Primer Año")) {
+        eventName = 'tree_carrera_links_1';
+      } else if (link.title.includes("Registro de Exámenes Viejos")) {
+        eventName = 'tree_carrera_examenes_viejos';
+      } else if (link.title.includes("Calendario Académico")) {
+        eventName = 'tree_carrera_calendario_academico';
+      } else if (link.title.includes("Mesas de Exámenes")) {
+        eventName = 'tree_carrera_mesas_examenes';
+      } else if (link.title.includes("Horarios de Cursado")) {
+        eventName = 'tree_carrera_horarios_cursado';
+      } else if (link.title.includes("Correlativas de Compu")) {
+        eventName = 'tree_carrera_correlativas';
+      }
+      
       return (
         <li>
-          <CustomLink url={link.url} underline={isMateriasPrimerAno}>{link.title}</CustomLink>
+          <CustomLink url={link.url} underline={isMateriasPrimerAno} eventName={eventName}>{link.title}</CustomLink>
         </li>
       );
     })

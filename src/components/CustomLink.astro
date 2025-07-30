@@ -1,11 +1,12 @@
 ---
-const { text, icon, url, underline = false } = Astro.props;
+const { text, icon, url, underline = false, eventName = 'tree_carrera_link_click' } = Astro.props;
 ---
 
 <li>
   <a
     href={url}
     class={`hover:bg-lightModeCustomLinkBackgroundHover dark:hover:bg-darkModeCustomLinkBackgroundHover hover:ring-lightModeCustomLinkOutlineHover dark:hover:ring-darkModeCustomLinkOutlineHover hover:text-lightModeCustomLinkTextHover dark:hover:text-darkModeCustomLinkTextHover flex items-center justify-center gap-2 rounded-full bg-lightModeCustomLinkBackground px-6 py-3 text-lg text-lightModeCustomLinkText ring-2 ring-lightModeCustomLinkOutline transition-colors dark:bg-darkModeCustomLinkBackground dark:text-darkModeCustomLinkText dark:ring-darkModeCustomLinkOutline ${underline ? 'underline underline-offset-4' : ''}`}
+    onclick="gtag('event', '${eventName}', { 'event_category': 'engagement', 'event_action': 'click', 'event_label': '${eventName}', 'event_value': 1 });"
   >
     <slot />
   </a>

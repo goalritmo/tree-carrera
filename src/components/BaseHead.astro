@@ -48,5 +48,29 @@ import Favicons from "@/components/Favicons.astro";
   <ViewTransitions />
   <Favicons />
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VG2JS6ZCGY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VG2JS6ZCGY', {
+      custom_map: {
+        'tree_carrera_event_category': 'event_category',
+        'tree_carrera_event_action': 'event_action',
+        'tree_carrera_event_label': 'event_label',
+        'tree_carrera_event_value': 'event_value'
+      }
+    });
+
+    // Tracking de Moovimiento
+    gtag('event', 'tree_carrera_moovimiento', {
+      'event_category': 'engagement',
+      'event_action': 'page_view',
+      'event_label': 'tree_carrera_homepage'
+    });
+  </script>
+
   <slot />
 </head>

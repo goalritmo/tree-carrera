@@ -3,14 +3,21 @@
 ---
 
 <div class="countdown-container text-center py-4">
-  <h2 class="text-2xl font-bold mb-4 text-blue-600">Inscripciones al Cursado del 2do Cuatrimestre</h2>
-  <div class="countdown-timer text-xl font-mono">
-    <span id="days">--</span> días, 
-    <span id="hours">--</span> horas, 
-    <span id="minutes">--</span> min,
-    <span id="seconds">--</span> segs
-  </div>
-  <p class="text-sm text-gray-600 mt-2">04/08/2025 al 15/08/2025</p>
+  <a href="https://autogestion.guarani.unc.edu.ar/" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     class="countdown-link block hover:opacity-80 transition-opacity cursor-pointer"
+     onclick="gtag('event', 'tree_carrera_countdown_click', { 'event_category': 'countdown', 'event_action': 'click', 'event_label': 'tree_carrera_autogestion_guarani', 'event_value': 1 });">
+  <h2 class="text-2xl font-bold mb-4 text-blue-600">Inscripciones al Cursado del 2do Cuatri</h2>
+    <div class="countdown-timer text-xl font-mono">
+      <span id="days">--</span> días, 
+      <span id="hours">--</span> horas, 
+      <span id="minutes">--</span> min,
+      <span id="seconds">--</span> segs
+    </div>
+  </a>
+    <p class="text-sm text-gray-600 mt-2">04/08/2025 al 15/08/2025</p>
+  
 </div>
 
 <script>

@@ -14,18 +14,16 @@ import Countdown from "@/components/Countdown.astro";
 <ul class="grid gap-y-6 pb-12 pt-4 text-center">
   {
     SITE.customLinks.map((link) => {
-      const isMateriasPrimerAno = link.title.includes("Materias de Primer Año");
+      const hasClipEmoji = link.title.includes("🔗");
       
       // Determinar el nombre del evento basado en el título del link
       let eventName = 'tree_carrera_link_click';
-      if (link.title.includes("Materias de Primer Año")) {
+      if (link.title.includes("Materias de Algoritmos")) {
         eventName = 'tree_carrera_links_1';
-      } else if (link.title.includes("Registro de Exámenes Viejos")) {
-        eventName = 'tree_carrera_examenes_viejos';
+      } else if (link.title.includes("Curso de Ingreso")) {
+        eventName = 'tree_carrera_curso_ingreso';
       } else if (link.title.includes("Calendario Académico")) {
         eventName = 'tree_carrera_calendario_academico';
-      } else if (link.title.includes("Mesas de Exámenes")) {
-        eventName = 'tree_carrera_mesas_examenes';
       } else if (link.title.includes("Horarios de Cursado")) {
         eventName = 'tree_carrera_horarios_cursado';
       } else if (link.title.includes("Correlativas de Compu")) {
@@ -34,7 +32,7 @@ import Countdown from "@/components/Countdown.astro";
       
       return (
         <li>
-          <CustomLink url={link.url} underline={isMateriasPrimerAno} eventName={eventName}>{link.title}</CustomLink>
+          <CustomLink url={link.url} underline={hasClipEmoji} eventName={eventName}>{link.title}</CustomLink>
         </li>
       );
     })

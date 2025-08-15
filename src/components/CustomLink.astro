@@ -1,7 +1,8 @@
 ---
 const { text, icon, url, underline = false, eventName = 'tree_carrera_link_click' } = Astro.props;
 
-const shouldOpenInNewTab = eventName !== 'tree_carrera_links_1';
+// Los links con emoji 🔗 se abren en la misma pestaña, los demás en nueva pestaña
+const shouldOpenInNewTab = !underline;
 ---
 
 <li>

@@ -8,28 +8,28 @@
   "customLinks": [
     {
       "id": "1728534585738",
-      "title": "🔗 Materias de Primer Año →",
-      "url": "https://1.goalritmo.com"
+      "title": "🔗 Materias de Algoritmos →",
+      "url": "https://algo.goalritmo.com"
     },
     {
       "id": "1728534585739",
-      "title": "✍ Registro de Exámenes Viejos",
-      "url": "https://examenes-viejos.pages.dev/ac/"
-    },
-    {
-      "id": "1728534585740",
       "title": "🗓 Calendario Académico (2025)",
       "url": "https://www.famaf.unc.edu.ar/documents/5131/RHCD-2024-507-E-UNC-DEC_FAMAF_-_Anexo_Calendario_Academico_2025.pdf"
     },
     {
-      "id": "1728534585741",
+      "id": "1728534585740",
       "title": "🕔 Horarios de Cursado (2025)",
       "url": "https://www.famaf.unc.edu.ar/la-facultad/institucional/secretarías/secretaria-academica/horarios-de-cursado/"
     },
     {
-      "id": "1728534585742",
+      "id": "1728534585741",
       "title": "📑 Correlativas de Compu",
       "url": "https://www.famaf.unc.edu.ar/documents/2785/CORR638.pdf"
+    },
+    {
+      "id": "1728534585742",
+      "title": "🔗 Curso de Ingreso →",
+      "url": "https://ingreso.goalritmo.com"
     }
   ]
 }
